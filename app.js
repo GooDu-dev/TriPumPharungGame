@@ -156,6 +156,7 @@ function randomQuestion(){
     }
     choiceForQuestion(randQuestion)
 }
+randomQuestion()
 
 function choiceForQuestion(randQuestion){
     let questionNumber = randQuestion;
