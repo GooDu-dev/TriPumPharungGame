@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vw;
+    background-color: #192021;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    transition: .5s;
+}
+nav .logo-img{
+    width: fit-content;
+    height: 100%;
+    padding-left: 4vw;
+    display: flex;
+    align-items: center;
+}
+nav .logo-img img{
+    width: 12.5vw;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60%;
+    padding-right: 4vw;
+}
+nav ul li{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: .5s;
+    position: relative;
+}
+nav ul li img{
+    width: 4vw;
+    position: absolute;
+    transition: .5s;
+    z-index: 1;
+}
+nav ul li a{
+    transform: translateX(0);
+    transition: .5s;
+    width: 50%;
+    color: transparent;
+    text-decoration: none;
+    font-size: 2vw;
+    text-align: start;
+    padding-left: 10px;
+    font-family: 'Mali',cursive;
+    font-weight: bolder;
+}
+nav ul li:hover img{
+    transform: translateX(-100%);
+}
+nav ul li:hover a{
+    transform: translateX(40%);
+    color: whitesmoke;
+    border-left: 5px solid whitesmoke;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
+}
+.container .op-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+    width: 80%;
+    margin: 0 auto;
+}
+.container .op-container .image-slide{
+    display: flex;
+    width: 100%;
+}
+.container .op-container .image-slide img{
+    width: 100%;
+}
+.container .op-container h1{
+    font-size: 5vw;
+    width: 100%;
+    text-align: center;
+    padding-top: 4vw;
+    font-family: 'Charm', cursive;
+}
+.container .story{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .story #story-header{
+    width: fit-content;
+    text-align: center;
+    font-size: 3.5vw;
+    margin: 2vw auto;
+    padding: .5vw 0;
+    font-family: 'Mali',cursive;
+    position: relative;
+}
+.container .story #story-header::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: pink;
+    height: .75vw;
+    width: 95%;
+    border-radius: 25px;
+}
+.container .story #story-details{
+    width: 80%;
+    text-align: center;
+    font-size: 2.5vw;
+    font-family: 'Mali',cursive;
+    line-height: 1.8;
+    letter-spacing: .05vw;
+}
+.container .game-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 15vw auto;
+    position: relative;
+}
+.container .game-container .game{
+    position: relative;
+    width: 100%;
+}
+.container .game-container .taskbar{
+    position: absolute;
+    display: none;
+}
+.container .game-container .game-background{
+    position: relative;
+    width: 100%;
+}
+.container .game-container .game-background img{
+    width: 100%;
+    position: relative;
+}
+.container .game-container .game-background .game-user-interface{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.container .game-container .game-background .game-user-interface .character{
+    position: absolute;
+    top: 20%;
+}
+.container .game-container .game-background .game-user-interface .character img{
+    width: 15vw;
+}
+.container .game-container .game-background .question{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 30%;
+    background-color: whitesmoke;
+    padding: 1vw 2vw;
+    border-radius: 25px;
+}
+.container .game-container .game-background .question h1{
+    font-size: 3vw;
+    font-family: 'Mali',cursive;
+    cursor: pointer;
+}
+.container .game-container .game-background .game-user-interface .choice-container{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2. auto);
+    grid-row-gap: 2vw;
+    width: 95%;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20%;
+}
+.container .game-container .game-background .game-user-interface .choice-container .choice{
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    padding: 1vw 2vw;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: .5s;
+}
+.container .game-container .game-background .game-user-interface .choice-container .choice:hover{
+    transform: translateY(-20%);
+}
+.container .game-container .game-background .game-user-interface .choice-container .choice h1{
+    font-size: 2vw;
+    font-family: 'Mali',cursive;
+    cursor: pointer;
+}
+.container .aboutus-container h1{
+    font-size: 5vw;
+    font-family: 'Charm', cursive;
+    padding-left: 2vw;
+    border-left: 1vw solid pink;
+}
+.container .aboutus-container .aboutus{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 5vw;
+    margin: 5vw auto;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container .aboutus-container .aboutus .card{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .aboutus-container .aboutus .card img{
+    width: 15vw;
+}
+.container .aboutus-container .aboutus .card h1{
+    text-align: center;
+    padding: 2vw 0;
+    font-family: 'Mali',cursive;
+    font-size: 2.5vw;
+    border: none;
+}
+
+
+

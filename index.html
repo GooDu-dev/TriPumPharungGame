@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./asset/logo/navbar-logo/stem04.png">
+    <title>STEM04</title>
+</head>
+<body>
+    <!-- * navbar -->
+    <nav id="nav">
+        <div class="logo-img">
+            <img src="./asset/logo/navbar-logo/stem04.png" alt="">
+        </div>
+        <ul>
+            <li>
+                <img src="./asset/logo/navbar-logo/home.png" alt="">
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <img src="./asset/logo/navbar-logo/open-book.png" alt="">
+                <a href="#story">Story</a>
+            </li>
+            <li>
+                <img src="./asset/logo/navbar-logo/video-game-controller.png" alt="">
+                <a href="#game">Game</a>
+            </li>
+            <li>
+                <img src="./asset/logo/navbar-logo/multiple-users-silhouette.png" alt="">
+                <a href="#aboutus">About Us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- * content -->
+    <div id="container" class="container">
+        <div id="home" class="op-container">
+            <div class="image-slide">
+                <img src="./asset/photos/tri2.jpg" alt="">
+            </div>
+            <h1>ไตรภูมิพระร่วง ตอน มนุสสภูมิ</h1>
+        </div>
+        <div id="story" class="story">
+            <h1 id="story-header">เนื้อเริ่องคร่าวๆ</h1>
+            <h1 id="story-details">ไตรภูมิพระร่วง ตอน มนุสสภูมิ  กล่าวถึงกล่าวถึงกำเนิดของมนุษย์ไว้อย่างละเอียดเป็นขั้นตอน  ตั้งแต่เริ่มปฏิสนธิจนกระทั่งคลอดจากครรภ์มารดา  โดยอธิบายว่าเมื่อแรกปฏิสนธินั้นมนุษย์ที่อยู่ในครรภ์มารดาจะมีขนาดเท่ากลละ หลังจากนั้น ทุก ๆ ๗ วัน ทารกจึงจะมีพัฒนาการ ใน ๗ วันแรก ทารกจะมีขนาดใหญ่ขึ้นเป็นก้อนดังไข่ไก่  จากนั้นจะเกิด “เบญจสาขาหูด” คือ มีมือ ๒ อัน เท้า ๒ อัน และหัวอีก ๑ หัว  ต่อมาจึงมีขนและเล็บ ซึ่งเป็นจำนวนครบ ๓๒ ทารกจะนั่งยอง ๆ กำมือทั้งสอง  คู้คอต่อหัวเข่าอยู่ในครรภ์มารดา ประมาณ ๗-๑๑ เดือน จึงจะคลอดออกมา</h1>
+        </div>
+        <div id="game" class="game-container">
+            <div class="game">
+                <div class="taskbar">
+                    <div class="score">
+                        0
+                    </div>
+                    <div class="time">
+                        0
+                    </div>
+                    <div class="questionCount">
+                        <h1 id="currentQuest">0</h1>
+                        <h1 id="maxQuestion">/20</h1>
+                    </div>
+                </div>
+                <div class="game-background">
+                    <img src="./asset/photos/game-background.jpg" alt="">
+                    <div class="game-user-interface">
+                        <div class="character">
+                            <img src="./asset/photos/asker.jpeg" alt="">
+                        </div>
+                        <div class="question">
+                            <h1 id="question">คำถามที่ :</h1>
+                        </div>
+                        <div class="choice-container">
+                            <div class="choice">
+                                <h1 onclick="randomQuestion()">A.</h1>
+                                <h1 choice='a' class="choice-details"></h1>
+                            </div>
+                            <div class="choice">
+                                <h1>B.</h1>
+                                <h1 choice='b' class="choice-details"></h1>
+                            </div>
+                            <div class="choice">
+                                <h1>C.</h1>
+                                <h1 choice='c' class="choice-details"></h1>
+                            </div>
+                            <div class="choice">
+                                <h1>D.</h1>
+                                <h1 choice='d' class="choice-details"></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="aboutus" class="aboutus-container">
+            <h1>คณะผู้จัดทำ</h1>
+            <div class="aboutus">
+                <div class="card">
+                    <img src="./asset/aboutUs/user.png" alt="">
+                    <h1>นายปวริศร์ กลิ่นศรีสุข เลขที่ 23</h1>
+                </div>
+                <div class="card">
+                    <img src="./asset/aboutUs/user.png" alt="">
+                </div>
+                <div class="card">
+                    <img src="./asset/aboutUs/user.png" alt="">
+                </div>
+                <div class="card">
+                    <img src="./asset/aboutUs/user.png" alt="">
+                </div>
+                <div class="card">
+                    <img src="./asset/aboutUs/user.png" alt="">
+                </div>
+                <div class="card">
+                    <img src="./asset/aboutUs/user.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='./app.js'></script>
+</body>
+</html>
