@@ -29,138 +29,126 @@ function navAnimation(){
     prevY = currentY
 }
 
+var answeredQuestion = []
 function randomQuestion(){
-    let randQuestion = Math.floor((Math.random()*40)+1)
+    let randQuestion, newRandQuestion
     let question = document.getElementById('question')
+    let correctAns;
+    randQuestion = Math.floor((Math.random()*25)+1)
+    while(checkAnswered(randQuestion)){
+        randQuestion = Math.floor((Math.random()*25)+1)
+    }
+    console.log('randQuestion is => ' + randQuestion)
     switch(randQuestion){
         case 1:
             question.innerHTML = 'คำถาม 1'
+            correctAns = 'a'
             break;
         case 2:
             question.innerHTML = 'คำถาม 2'
+            correctAns = 'b'
             break;
         case 3:
             question.innerHTML = 'คำถาม 3'
+            correctAns = 'c'
             break;
         case 4:
             question.innerHTML = 'คำถาม 4'
+            correctAns = 'd'
             break;
         case 5:
             question.innerHTML = 'คำถาม 5'
+            correctAns = 'a'
             break;
         case 6:
             question.innerHTML = 'คำถาม 6'
+            correctAns = 'b'
             break;
         case 7:
             question.innerHTML = 'คำถาม 7'
+            correctAns = 'c'
             break;
         case 8:
             question.innerHTML = 'คำถาม 8'
+            correctAns = 'd'
             break;
         case 9:
             question.innerHTML = 'คำถาม 9'
+            correctAns = 'a'
             break;
         case 10:
             question.innerHTML = 'คำถาม 10'
+            correctAns = 'b'
             break;
         case 11:
             question.innerHTML = 'คำถาม 11'
+            correctAns = 'c'
             break;
         case 12:
             question.innerHTML = 'คำถาม 12'
+            correctAns = 'd'
             break;
         case 13:
             question.innerHTML = 'คำถาม 13'
+            correctAns = 'a'
             break;
         case 14:
             question.innerHTML = 'คำถาม 14'
+            correctAns = 'b'
             break;
         case 15:
             question.innerHTML = 'คำถาม 15'
+            correctAns = 'c'
             break;
         case 16:
             question.innerHTML = 'คำถาม 16'
+            correctAns = 'd'
             break;
         case 17:
             question.innerHTML = 'คำถาม 17'
+            correctAns = 'a'
             break;
         case 18:
             question.innerHTML = 'คำถาม 18'
+            correctAns = 'b'
             break;
         case 19:
             question.innerHTML = 'คำถาม 19'
+            correctAns = 'c'
             break;
         case 20:
             question.innerHTML = 'คำถาม 20'
+            correctAns = 'd'
             break;
         case 21:
             question.innerHTML = 'คำถาม 21'
+            correctAns = 'a'
             break;
         case 22:
             question.innerHTML = 'คำถาม 22'
+            correctAns = 'b'
             break;
         case 23:
             question.innerHTML = 'คำถาม 23'
+            correctAns = 'c'
             break;
         case 24:
             question.innerHTML = 'คำถาม 24'
+            correctAns = 'd'
             break;
         case 25:
             question.innerHTML = 'คำถาม 25'
-            break;
-        case 26:
-            question.innerHTML = 'คำถาม 26'
-            break;
-        case 27:
-            question.innerHTML = 'คำถาม 27'
-            break;
-        case 28:
-            question.innerHTML = 'คำถาม 28'
-            break;
-        case 29:
-            question.innerHTML = 'คำถาม 29'
-            break;
-        case 30:
-            question.innerHTML = 'คำถาม 30'
-            break;
-        case 31:
-            question.innerHTML = 'คำถาม 31'
-            break;
-        case 32:
-            question.innerHTML = 'คำถาม 32'
-            break;
-        case 33:
-            question.innerHTML = 'คำถาม 33'
-            break;
-        case 34:
-            question.innerHTML = 'คำถาม 34'
-            break;
-        case 35:
-            question.innerHTML = 'คำถาม 35'
-            break;
-        case 36:
-            question.innerHTML = 'คำถาม 36'
-            break;
-        case 37:
-            question.innerHTML = 'คำถาม 37'
-            break;
-        case 38:
-            question.innerHTML = 'คำถาม 38'
-            break;
-        case 39:
-            question.innerHTML = 'คำถาม 39'
-            break;
-        case 40:
-            question.innerHTML = 'คำถาม 40'
+            correctAns = 'a'
             break;
     }
-    choiceForQuestion(randQuestion)
+    choiceForQuestion(randQuestion, correctAns)
 }
 randomQuestion()
 
-function choiceForQuestion(randQuestion){
+function choiceForQuestion(randQuestion, correctAnswer){
     let questionNumber = randQuestion;
     let ans1, ans2, ans3, ans4
+    let answer = correctAnswer
     switch (questionNumber) {
         case 1:
             ans1 = 'คำตอบ 1-1' 
@@ -312,112 +300,44 @@ function choiceForQuestion(randQuestion){
             ans3 = 'คำตอบ 3-25' 
             ans4 = 'คำตอบ 4-25' 
             break;
-        case 26:
-            ans1 = 'คำตอบ 1-26' 
-            ans2 = 'คำตอบ 2-26' 
-            ans3 = 'คำตอบ 3-26' 
-            ans4 = 'คำตอบ 4-26' 
-            break;
-        case 27:
-            ans1 = 'คำตอบ 1-27' 
-            ans2 = 'คำตอบ 2-27' 
-            ans3 = 'คำตอบ 3-27' 
-            ans4 = 'คำตอบ 4-27' 
-            break;
-        case 28:
-            ans1 = 'คำตอบ 1-28' 
-            ans2 = 'คำตอบ 2-28' 
-            ans3 = 'คำตอบ 3-28' 
-            ans4 = 'คำตอบ 4-28' 
-            break;
-        case 29:
-            ans1 = 'คำตอบ 1-29' 
-            ans2 = 'คำตอบ 2-29' 
-            ans3 = 'คำตอบ 3-29' 
-            ans4 = 'คำตอบ 4-29' 
-            break;
-        case 30:
-            ans1 = 'คำตอบ 1-30' 
-            ans2 = 'คำตอบ 2-30' 
-            ans3 = 'คำตอบ 3-30' 
-            ans4 = 'คำตอบ 4-30' 
-            break;
-        case 31:
-            ans1 = 'คำตอบ 1-31' 
-            ans2 = 'คำตอบ 2-31' 
-            ans3 = 'คำตอบ 3-31' 
-            ans4 = 'คำตอบ 4-31' 
-            break;
-        case 32:
-            ans1 = 'คำตอบ 1-32' 
-            ans2 = 'คำตอบ 2-32' 
-            ans3 = 'คำตอบ 3-32' 
-            ans4 = 'คำตอบ 4-32' 
-            break;
-        case 33:
-            ans1 = 'คำตอบ 1-33' 
-            ans2 = 'คำตอบ 2-33' 
-            ans3 = 'คำตอบ 3-33' 
-            ans4 = 'คำตอบ 4-33' 
-            break;
-        case 34:
-            ans1 = 'คำตอบ 1-34' 
-            ans2 = 'คำตอบ 2-34' 
-            ans3 = 'คำตอบ 3-34' 
-            ans4 = 'คำตอบ 4-34' 
-            break;
-        case 35:
-            ans1 = 'คำตอบ 1-35' 
-            ans2 = 'คำตอบ 2-35' 
-            ans3 = 'คำตอบ 3-35' 
-            ans4 = 'คำตอบ 4-35' 
-            break;
-        case 36:
-            ans1 = 'คำตอบ 1-36' 
-            ans2 = 'คำตอบ 2-36' 
-            ans3 = 'คำตอบ 3-36' 
-            ans4 = 'คำตอบ 4-36' 
-            break;
-        case 37:
-            ans1 = 'คำตอบ 1-37' 
-            ans2 = 'คำตอบ 2-37' 
-            ans3 = 'คำตอบ 3-37' 
-            ans4 = 'คำตอบ 4-37' 
-            break;
-        case 38:
-            ans1 = 'คำตอบ 1-38' 
-            ans2 = 'คำตอบ 2-38' 
-            ans3 = 'คำตอบ 3-38' 
-            ans4 = 'คำตอบ 4-38' 
-            break;
-        case 39:
-            ans1 = 'คำตอบ 1-39' 
-            ans2 = 'คำตอบ 2-39' 
-            ans3 = 'คำตอบ 3-39' 
-            ans4 = 'คำตอบ 4-39' 
-            break;
-        case 40:
-            ans1 = 'คำตอบ 1-40' 
-            ans2 = 'คำตอบ 2-40' 
-            ans3 = 'คำตอบ 3-40' 
-            ans4 = 'คำตอบ 4-40' 
-            break;
     }
-
     let choices = document.querySelectorAll('.choice-details')
     choices.forEach(choice => {
         choiceNum = choice.getAttribute('choice')
         if(choiceNum == 'a'){
             choice.innerHTML = ans1
         }
-        if(choiceNum == 'b'){
+        else if(choiceNum == 'b'){
             choice.innerHTML = ans2
         }
-        if(choiceNum == 'c'){
+        else if(choiceNum == 'c'){
             choice.innerHTML = ans3
         }
-        if(choiceNum == 'd'){
+        else if(choiceNum == 'd'){
             choice.innerHTML = ans4
         }
+        if(choiceNum == answer){
+            choice.setAttribute('correct', true)
+        }
+        else{
+            choice.removeAttribute('correct')
+        }
     })
+    answeredQuestion.push(questionNumber)
+    console.log(answeredQuestion)
+    return answeredQuestion
+}
+
+function checkAnswered(currentQuestion){
+    console.log('checking...')
+    for(answered in answeredQuestion){
+        console.log(answered)
+        if(answeredQuestion[answered] == currentQuestion){
+            console.log('current question is => '+answeredQuestion[answered])
+            console.log('New random')
+            return true
+        }
+    }
+    console.log('does not same')
+    return false
 }
