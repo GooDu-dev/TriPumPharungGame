@@ -51,11 +51,7 @@
                 <div class="taskbar">
                     <div class="score">
                         <h1>Score</h1>
-                        <h1>0</h1>
-                    </div>
-                    <div class="time">
-                        <h1>Timer</h1>
-                        <h1>0</h1>
+                        <h1 id="score">0</h1>
                     </div>
                     <div class="questionCount">
                         <div class="questionHeader">
@@ -67,7 +63,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="game-background">
+                <div id="game-frontground" class="game-frontground">
+                    <img src="./asset/photos/frontgroound.jpg" alt="">
+                    <button onclick="startGame()" id="start-button">Start!</button>
+                </div>
+                <div id="game-background" class="game-background">
                     <img src="./asset/photos/game-background.jpg" alt="">
                     <div class="game-user-interface">
                         <div class="character">
@@ -77,24 +77,32 @@
                             <h1 id="question">คำถามที่ :</h1>
                         </div>
                         <div class="choice-container">
-                            <div onclick="randomQuestion()" class="choice">
+                            <div class="choice">
                                 <h1>A.</h1>
                                 <h1 choice='a' class="choice-details"></h1>
                             </div>
-                            <div onclick="randomQuestion()" class="choice">
+                            <div class="choice">
                                 <h1>B.</h1>
                                 <h1 choice='b' class="choice-details"></h1>
                             </div>
-                            <div onclick="randomQuestion()" class="choice">
+                            <div class="choice">
                                 <h1>C.</h1>
                                 <h1 choice='c' class="choice-details"></h1>
                             </div>
-                            <div onclick="randomQuestion()" class="choice">
+                            <div class="choice">
                                 <h1>D.</h1>
                                 <h1 choice='d' class="choice-details"></h1>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div id="endGame" class="endGame">
+                    <img src="./asset/photos/endGame.jpg" alt="">
+                    <div class="finalScore">
+                        <h1>Score : </h1>
+                        <h1 id="finalScore"></h1>
+                    </div>
+                    <button onclick="startGame()">Play Again!</button>
                 </div>
             </div>
         </div>
@@ -103,22 +111,27 @@
             <div class="aboutus">
                 <div class="card">
                     <img src="./asset/aboutUs/user.png" alt="">
+                    <h1>นายปัณณ์  เลขที่ 5</h1>
+                </div>
+                <div class="card">
+                    <img src="./asset/aboutUs/user.png" alt="">
+                    <h1>นายณฤมนต์  เลขที่ 12</h1>
+                </div>
+                <div class="card">
+                    <img src="./asset/aboutUs/user.png" alt="">
+                    <h1>นายจารุวิทย์  เลขที่ 15</h1>
+                </div>
+                <div class="card">
+                    <img src="./asset/aboutUs/user.png" alt="">
+                    <h1>นายรวิภาส  เลขที่ 22</h1>
+                </div>
+                <div class="card">
+                    <img src="./asset/aboutUs/user.png" alt="">
                     <h1>นายปวริศร์ กลิ่นศรีสุข เลขที่ 23</h1>
                 </div>
                 <div class="card">
                     <img src="./asset/aboutUs/user.png" alt="">
-                </div>
-                <div class="card">
-                    <img src="./asset/aboutUs/user.png" alt="">
-                </div>
-                <div class="card">
-                    <img src="./asset/aboutUs/user.png" alt="">
-                </div>
-                <div class="card">
-                    <img src="./asset/aboutUs/user.png" alt="">
-                </div>
-                <div class="card">
-                    <img src="./asset/aboutUs/user.png" alt="">
+                    <h1>นายหัสฐากร  เลขที่ 24</h1>
                 </div>
             </div>
         </div>

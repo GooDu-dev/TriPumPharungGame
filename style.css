@@ -170,14 +170,6 @@ nav ul li:hover a{
     text-align: center;
     font-family: 'Mali', cursive;
 }
-.container .game-container .taskbar .time{
-    position: relative;
-}
-.container .game-container .taskbar .time h1{
-    font-size: 2.5vw;
-    text-align: center;
-    font-family: 'Mali', cursive;
-}
 .container .game-container .taskbar .questionCount{
     position: relative;
     display: flex;
@@ -198,9 +190,37 @@ nav ul li:hover a{
     font-weight: bolder;
     text-align: center;
 }
+.container .game-background .game-frontground{
+    position: relative;
+    width: 100%;
+}
+.container .game-container .game-frontground img{
+    width: 100%;
+}
+.container .game-container .game-frontground #start-button{
+    position: absolute;
+    padding: .5vw 1vw;
+    font-size: 2vw;
+    border-radius: 25px;
+    background-color: lightgray;
+    border: 5px solid black;
+    box-shadow: 0px 0px 20px whitesmoke;
+    font-family: 'Mali', cursive;
+    font-weight: bolder;
+    letter-spacing: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+}
+.container .game-container .game-frontground #start-button:hover{
+    background-color: whitesmoke;
+    letter-spacing: 5px;
+}
 .container .game-container .game-background{
     position: relative;
     width: 100%;
+    display: none;
 }
 .container .game-container .game-background img{
     width: 100%;
@@ -264,6 +284,47 @@ nav ul li:hover a{
     font-family: 'Mali',cursive;
     cursor: pointer;
 }
+.container .game-container .endGame{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+.container .game-container .endGame img{
+    position: relative;
+    width: 100%;
+}
+.container .game-container .endGame .finalScore{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 1vw 2vw;
+    border-radius: 25px;
+}
+.container .game-container .endGame .finalScore h1{
+    font-size: 3vw;
+    font-family: 'Mali', cursive;
+}
+.container .game-container .endGame button{
+    position: absolute;
+    transform: translateY(200%);
+    padding: 1vw 2vw;
+    font-size: 2.5vw;
+    border-radius: 25px;
+    background-color: transparent;
+    color: whitesmoke;
+    border: 5px solid whitesmoke;
+    transition: .5s;
+}
+.container .game-container .endGame button:hover{
+    background-color: whitesmoke;
+    color: black;
+}
 .container .aboutus-container h1{
     font-size: 5vw;
     font-family: 'Charm', cursive;
@@ -296,6 +357,7 @@ nav ul li:hover a{
     font-family: 'Mali',cursive;
     font-size: 2.5vw;
     border: none;
+    line-height: 2;
 }
 
 

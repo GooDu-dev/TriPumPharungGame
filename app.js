@@ -5,6 +5,21 @@ window.onresize = function(){
 window.onscroll = function(){
     navAnimation()
 }
+window.onload = function(){
+    let choices = document.querySelectorAll('.choice')
+    choices.forEach(choice => {
+        choice.addEventListener('click', function(){
+            let choice_details = choice.getElementsByClassName('choice-details')[0]
+            let isCorrect = choice_details.getAttribute('correct')
+            if(isCorrect){
+                correct()
+            }
+            else{
+                nextQuestion()
+            }
+        })
+    })
+}
 
 function checkPos(){
     var container = document.getElementById('home')
@@ -30,6 +45,7 @@ function navAnimation(){
 }
 
 var answeredQuestion = []
+var currentCorrectAnswer
 function randomQuestion(){
     let randQuestion, newRandQuestion
     let question = document.getElementById('question')
@@ -143,7 +159,6 @@ function randomQuestion(){
     }
     choiceForQuestion(randQuestion, correctAns)
 }
-randomQuestion()
 
 function choiceForQuestion(randQuestion, correctAnswer){
     let questionNumber = randQuestion;
@@ -325,7 +340,7 @@ function choiceForQuestion(randQuestion, correctAnswer){
     })
     answeredQuestion.push(questionNumber)
     console.log(answeredQuestion)
-    return answeredQuestion
+    return answeredQuestion, currentCorrectAnswer = answer
 }
 
 function checkAnswered(currentQuestion){
@@ -340,4 +355,48 @@ function checkAnswered(currentQuestion){
     }
     console.log('does not same')
     return false
+}
+
+isPlaying = false
+function startGame(){
+    let start_button = document.getElementById('start-button')
+    let game_frontground = document.getElementById('game-frontground')
+    let game_background = document.getElementById('game-background')
+    let endGame = document.getElementById('endGame')
+    game_frontground.style.display = 'none'
+    game_background.style.display = 'flex'
+    endGame.style.display = 'none'
+    // ? Set the default setting
+    let question = document.getElementById('currentQuest')
+    question.innerHTML = 0
+    let score = document.getElementById('score')
+    score.innerHTML = 0
+    answeredQuestion = []
+    nextQuestion()
+}
+
+function correct(){
+    let score = document.getElementById('score')
+    let currentScore = Number(score.innerHTML)
+    score.innerHTML = currentScore +1
+    nextQuestion()
+}
+function nextQuestion(){
+    let question = document.getElementById('currentQuest')
+    let currQuest = Number(question.innerHTML)
+    question.innerHTML = currQuest +1
+    if(question.innerHTML >= 21){
+        question.innerHTML = 20
+        return endGame()
+    }
+    randomQuestion()
+}
+function endGame(){
+    let endGame = document.getElementById('endGame')
+    let background = document.getElementById('game-background')
+    let score = document.getElementById('score')
+    let finalscore = document.getElementById('finalScore')
+    finalscore.innerHTML = score.innerHTML
+    endGame.style.display = 'flex'
+    background.style.display = 'none'
 }
