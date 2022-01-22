@@ -243,19 +243,19 @@ nav ul li:hover a{
 .container .game-container .game-background .question{
     position: absolute;
     left: 50%;
-    transform: translate(-40%, -30%);
-    top: 25%;
+    transform: translate(-40%, -25%);
+    top: 15%;
     background-color: whitesmoke;
     padding: 1vw 2vw;
     border-radius: 25px;
     width: 70%;
 }
 .container .game-container .game-background .question h1{
-    font-size: 2.5vw;
+    font-size: 2vw;
     font-family: 'Mali',cursive;
     cursor: pointer;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.25;
 }
 .container .game-container .game-background .game-user-interface .choice-container{
     display: grid;
@@ -283,7 +283,7 @@ nav ul li:hover a{
     transform: translateY(-20%);
 }
 .container .game-container .game-background .game-user-interface .choice-container .choice h1{
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-family: 'Mali',cursive;
     cursor: pointer;
 }
