@@ -235,7 +235,7 @@ nav ul li:hover a{
 }
 .container .game-container .game-background .game-user-interface .character{
     position: absolute;
-    top: 20%;
+    top: 10%;
 }
 .container .game-container .game-background .game-user-interface .character img{
     width: 15vw;
@@ -243,16 +243,19 @@ nav ul li:hover a{
 .container .game-container .game-background .question{
     position: absolute;
     left: 50%;
-    transform: translate(-50%);
-    top: 30%;
+    transform: translate(-40%, -30%);
+    top: 25%;
     background-color: whitesmoke;
     padding: 1vw 2vw;
     border-radius: 25px;
+    width: 70%;
 }
 .container .game-container .game-background .question h1{
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-family: 'Mali',cursive;
     cursor: pointer;
+    text-align: center;
+    line-height: 1.5;
 }
 .container .game-container .game-background .game-user-interface .choice-container{
     display: grid;
@@ -260,11 +263,9 @@ nav ul li:hover a{
     grid-template-rows: repeat(2. auto);
     grid-row-gap: 2vw;
     width: 95%;
-    justify-content: space-evenly;
-    align-items: center;
     position: absolute;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, 30%);
     bottom: 20%;
 }
 .container .game-container .game-background .game-user-interface .choice-container .choice{
@@ -275,6 +276,8 @@ nav ul li:hover a{
     border-radius: 25px;
     overflow: hidden;
     transition: .5s;
+    width: 80%;
+    margin: 0 auto;
 }
 .container .game-container .game-background .game-user-interface .choice-container .choice:hover{
     transform: translateY(-20%);
