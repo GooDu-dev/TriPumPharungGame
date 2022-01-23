@@ -5,7 +5,24 @@ window.onresize = function(){
 window.onscroll = function(){
     navAnimation()
 }
+
+navAct = false
 window.onload = function(){
+    let nav = document.getElementById('nav')
+    let button = document.getElementById('button-toggle')
+    let img = document.getElementById('toggle-image')
+    button.addEventListener('click', function(){
+        if(navAct){
+            nav.style.left = '100%'
+            img.setAttribute('src', './asset/logo/navbar-logo/plus-sign.png')
+        }
+        else{
+            nav.style.left = '0%'
+            img.setAttribute('src', './asset/logo/navbar-logo/incorrect.png') 
+        }
+        navAct = !navAct
+    })
+
     let choices = document.querySelectorAll('.choice')
     choices.forEach(choice => {
         choice.addEventListener('click', function(){
@@ -25,7 +42,9 @@ function checkPos(){
     var container = document.getElementById('home')
     var nav = document.getElementById('nav')
     container.style.height = window.innerHeight + 'px'
-    container.style.paddingTop = nav.offsetHeight + 'px'
+    if(window.offsetWidth > 780){
+        container.style.paddingTop = nav.offsetHeight + 'px'
+    }
 }
 checkPos()
 
@@ -33,13 +52,28 @@ prevY = window.scrollY
 function navAnimation(){
     let currentY = window.scrollY
     let nav = document.getElementById("nav")
+    let img = document.getElementById('toggle-image')
     // ? scroll Down
     if(prevY < currentY){
-        nav.style.top = -10 + 'vw'
+        if(window.offsetWidth > 780){
+            nav.style.top = -10 + 'vw'
+        }
+        else{
+            nav.style.left = '100%'
+            navAct = false
+            img.setAttribute('src', './asset/logo/navbar-logo/plus-sign.png')
+        }
     }
-    else{
+    else if(prevY >= currentY){
         // ? scroll Up
-        nav.style.top = '0px'
+        if(window.offsetWidth > 780){
+            nav.style.top = '0px'
+        }
+        else{
+            nav.style.left = '100%'
+            navAct = false
+            img.setAttribute('src', './asset/logo/navbar-logo/plus-sign.png')
+        }
     }
     prevY = currentY
 }
